@@ -1,0 +1,26 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../static/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+</head>
+<body>
+  <h1>...FIND SIMILAR WORDS...</h1>
+  <form action="" method="POST">
+    <p><b>Enter Your Word :</b><br><br> <input type="text" name="word" required></p>
+    <p><input type="submit" value="Search"></p>
+  </form>
+  {% if after_srch %}
+  {% if found %}
+  <h2>Words similar to {{word}}</h2>
+  <ul>
+    {% for i in results %}
+    <li>{{i}}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p><b>Sorry, searched word not in vocabulary</b></p>
+  {% endif %}
+  {% endif %}
+</body>
+</html>

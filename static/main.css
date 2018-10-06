@@ -1,0 +1,41 @@
+body{
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Merriweather;
+  font-size: 1.5vw;
+}
+h1, h2{
+  text-align: center;
+  padding: 2vw;
+  font-family: Anton;
+  text-shadow: 1px 1px white;
+}
+input[type=text]{
+  width: 30%;
+  font-size: 1.5vw;
+  font-family: Merriweather;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  background-color: rgba(216, 207, 207, 0.589);
+}
+input[type=submit]{
+  font-family: Merriweather;
+  border-radius: 0.5vw;
+  font-size: 1.5vw;
+  background-color: rgba(0, 0, 0, 0.486);
+  padding:0.5vw;
+  color: white;
+  cursor: pointer;
+}
+p{
+  text-align: center;
+}
+ul{
+  width: 25%;
+  display: block;
+  margin: auto;
+  background-color: rgba(216, 207, 207, 0.589);
+  padding: 1vw;
+  border-radius: 1vw;
+}
