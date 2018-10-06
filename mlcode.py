@@ -31,7 +31,7 @@ def find_similar(word, words=words, vecs=vecs):
         return "Word not in vocabulary!"
     vec1 = vecs[idx].reshape((1,50))
     sims = similarity(vecs, vec1)
-    simidx = np.where(sims > 0.7)[0]
+    simidx = np.where(sims > 0.6)[0]
     simwords = []
     for i in simidx:
         if i!=idx:
@@ -39,7 +39,7 @@ def find_similar(word, words=words, vecs=vecs):
     return simwords
 
 def filter_results(simwords):
-    if simwords=="Word not in vocabulary!":
+    if simwords=="Word not in vocabulary!" or len(simwords)==0:
         return simwords
     simwords = sorted(simwords, key = lambda x:x[1], reverse=True)
     return list(np.array(simwords)[:5,0])
