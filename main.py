@@ -16,4 +16,4 @@ def main():
     return render_template('main.html', after_srch=False)
 
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-app.run(debug=True)
+#app.run(debug=True)
